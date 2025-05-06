@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Images</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .university {
+            width: 200px;
+            height: 200px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="university" id="harvard">Harvard University</div>
+        <div class="university" id="yale">Yale University</div>
+        <div class="university" id="princeton">Princeton University</div>
+        <div class="university" id="berkeley">UC Berkeley</div>
+        <div class="university" id="imperial">Imperial College London</div>
+    </div>
+    <script>
+        // This is just for display - you'll need to save these as actual images
+        document.querySelectorAll('.university').forEach(el => {
+            el.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            el.style.color = '#ffffff';
+        });
+    </script>
+</body>
+</html> 
